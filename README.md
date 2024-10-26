@@ -2,6 +2,8 @@
 
 Este es un proyecto básico de una aplicación web de encuesta construida con Flask y Flask-WTF. La aplicación permite a los usuarios completar una encuesta, y sus respuestas se almacenan en una base de datos **DuckDB**.
 
+*Por ahora solo en el localhost
+
 ## Pasos
 
 1. **Crear la tabla en DuckDB:**

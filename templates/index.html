@@ -10,7 +10,6 @@
     <div class="container">
         <h1 class="mt-5">Cargar Datos de Usuario</h1>
         
-        <!-- Mensajes de éxito -->
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
@@ -22,13 +21,57 @@
         <form method="POST" action="/">
             {{ form.hidden_tag() }}
             <div class="form-group">
-                {{ form.fullname.label(class="form-control-label") }}
-                {{ form.fullname(class="form-control") }}
+                {{ form.nombre_empresa.label(class="form-control-label") }}
+                {{ form.nombre_empresa(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.nombre_fantasia.label(class="form-control-label") }}
+                {{ form.nombre_fantasia(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.cuit.label(class="form-control-label") }}
+                {{ form.cuit(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.direccion_establecimiento.label(class="form-control-label") }}
+                {{ form.direccion_establecimiento(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.direccion_administracion.label(class="form-control-label") }}
+                {{ form.direccion_administracion(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.partido_localidad.label(class="form-control-label") }}
+                {{ form.partido_localidad(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.actividad_principal.label(class="form-control-label") }}
+                {{ form.actividad_principal(class="form-control") }}
+            </div>
+
+            <h3>Datos del Respondente de la Encuesta</h3>
+            
+            <div class="form-group">
+                {{ form.nombre_respondente.label(class="form-control-label") }}
+                {{ form.nombre_respondente(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.cargo_area.label(class="form-control-label") }}
+                {{ form.cargo_area(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.tipo_telefono.label(class="form-control-label") }}
+                {{ form.tipo_telefono(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.numero_telefono.label(class="form-control-label") }}
+                {{ form.numero_telefono(class="form-control") }}
             </div>
             <div class="form-group">
                 {{ form.email.label(class="form-control-label") }}
                 {{ form.email(class="form-control") }}
             </div>
+
             <div class="form-group">
                 {{ form.submit(class="btn btn-primary") }}
             </div>

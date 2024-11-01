@@ -1,19 +1,20 @@
 import duckdb
 
-# Conéctate a DuckDB
+# Connect to DuckDB
 con = duckdb.connect('C:\\Users\\usuario\\Desktop\\Proyectos\\GUILLE\\PGB\\Formulario Flask\\coffeecms.duckdb')
 
-# Eliminar la tabla si ya existe
+# Drop the table if it already exists
 con.execute("DROP TABLE IF EXISTS users")
 
-# Crear la tabla sin restricciones de identidad
+# Create the table with the appropriate columns
 con.execute("""
 CREATE TABLE users (
     user_id INTEGER PRIMARY KEY,
-    fullname VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
+    nombre VARCHAR(255) NOT NULL,
+    fantasia VARCHAR(255) NOT NULL,
+    cuit INTEGER NOT NULL
 )
 """)
 
-# Cerrar la conexión
+# Close the connection
 con.close()
